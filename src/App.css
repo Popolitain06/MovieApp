@@ -49,7 +49,7 @@ article{
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 h2{
@@ -95,10 +95,10 @@ h2::after {
 
 @keyframes moveLine {
     0% {
-        transform: translateX(-100%); /* Position de départ du trait */
+        transform: translateX(-100%);
     }
     100% {
-        transform: translateX(100%); /* Position de fin du trait */
+        transform: translateX(100%);
     }
 }
 

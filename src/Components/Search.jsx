@@ -5,17 +5,25 @@ import Movie from "./Movie";
 
 function Search(){
 
-    const BASE_IMG_URL = "https://image.tmdb.org/t/p/w500";
-
     const[searchItem, setSearchItem] = useState("")
 
     const[dataItem, setDataItem] = useState([])
+
+    const[companyId, setCompanyId] = useState("")
 
     useEffect(()=>{
         fetch(`https://api.themoviedb.org/3/search/movie?query=${searchItem}&api_key=a44d45900baf353ab350b996e5baf283`)
         .then(res => res.json())
         .then(res => setDataItem(res.results))
         .catch(err => {throw Error("Erreur" + err )})},[searchItem])
+
+    useEffect(()=>{
+        fetch(`https://api.themoviedb.org/3/movie/${dataItem.id}?api_key=a44d45900baf353ab350b996e5baf283`)
+        .then(res => res.json())
+        .then(res => setCompanyId(res.production_companies))
+        .catch(err => {throw Error("Erreur" + err )})
+        console.log("Companie de production", companyId)}
+        ,[dataItem])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -38,8 +46,9 @@ function Search(){
             </form>
 
             <h2>Recherche en cours</h2>
+
             <div className="movie-container">
-            <Movie dataItem = {dataItem}/>
+                <Movie dataItem = {dataItem}/>
             </div>
 
         </>
