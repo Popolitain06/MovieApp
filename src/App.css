@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid white;
+    margin: 1rem;
+    padding: 1rem;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+body{
+    background-color: #0d0d1a;
+    overflow-x: hidden;
+}
+
+a:hover{
+    color: black;
+    background-color: white;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin: 0 auto;
+    max-width: 90%; 
+}
+
+.movie-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(30% - 2rem);
+    margin: 2rem auto;
+    padding: 2rem;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+}
+
+h1{
+    color: rgb(66, 7, 161);
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, rgb(66, 7, 161), rgba(255, 255, 255, 0.712));
+}
+
+h2{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, rgb(66, 7, 161), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+
+}
+
+h2::after {
+    content: ""; 
+    position: absolute; 
+    bottom: -2px; 
+    left: 0; 
+    width: 100%; 
+    height: 2px; 
+    background-color: rgb(66, 7, 161); 
+    animation: moveLine 2s linear infinite; 
+    content: ''; 
+}
+
+@keyframes moveLine {
+    0% {
+        transform: translateX(-100%); /* Position de départ du trait */
+    }
+    100% {
+        transform: translateX(100%); /* Position de fin du trait */
+    }
+}
+
+label{
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.774),rgb(66, 7, 161));
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    font-family:  'Bebas Neue', sans-serif;
+}
+body, label, button {
+    font-family: 'Roboto', sans-serif;
+}
+.search-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.search-form label {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.search-form input[type="text"] {
+    width: 50%;
+    padding: 0.5rem;
+    border: 3px solid white;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: rgb(31, 30, 30);
+    color: white;
+}
+
+.search-form button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: rgb(66, 7, 161);
+    color: white;
+}
+
+@media (max-width: 780px) {
+
+article {
+    width: calc(50% - 2rem);
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+.movie-container {
+    flex-direction: column;
+}
+
+}
