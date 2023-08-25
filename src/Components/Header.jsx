@@ -1,4 +1,5 @@
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route, NavLink } from "react-router-dom"
+import img from '../Ressources/Searcher.png'
 
 function Header(){
 
@@ -7,12 +8,12 @@ function Header(){
 
     <>
         
-        <h1>Movie Searcher</h1>
+        <h1><img src={img} alt="ff" className="img-header" ></img></h1>
 
             <nav> 
 
-                <Link to ={"/"}>Home</Link>
-                <Link to ={"search"}>Search</Link>
+                <NavLink to ={"/"}>Home</NavLink>
+                <NavLink to ={"search"}>Search</NavLink>
 
             </nav>
 

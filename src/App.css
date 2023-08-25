@@ -3,18 +3,26 @@
 
 a{
     display: inline-block;
+    width: 10rem;
+    text-align: center;
     text-decoration: none;
     border: 2px solid white;
     margin: 1rem;
     padding: 1rem;
     color: white;
     transition: background-color 0.3s, color 0.3s;
+}
 
+.active {
+    background-color: rgb(66, 7, 161);
+    color: white;
 }
 
 body{
     background-color: #0d0d1a;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 a:hover{
@@ -33,6 +41,7 @@ a:hover{
 .movie-container img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 article{
@@ -59,24 +68,32 @@ h2{
 }
 
 h1{
-    color: rgb(66, 7, 161);
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 700;
-    padding: 0.5rem 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(45deg, rgb(66, 7, 161), rgba(255, 255, 255, 0.712));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    height: 20rem;
+    margin-top: 0;
+    background-image: url(./Ressources/drib-2.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+.img-header{
+    max-width: 100%;
+    height: auto;
+    width: 25rem;
+}
 h2{
     text-align: center;
+    color: rgb(66, 7, 161);
     font-size: 4rem;
     font-weight: 700;
     padding: 0.5rem 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(45deg, rgb(66, 7, 161), rgb(255, 255, 255));
-    -webkit-background-clip: text;
-    color: transparent;
     position: relative;
 
 }
@@ -108,8 +125,14 @@ label{
 
 nav{
     display: flex;
+    width: 50%;
+    margin: 0 auto 2rem;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
     justify-content: space-around;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.774),rgb(66, 7, 161));
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.774),rgb(66, 7, 161),rgba(255, 255, 255, 0.774));
+    border-radius: 5px;
 }
 
 h3{
@@ -125,7 +148,7 @@ body, label, button {
 .search-form {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 60%;
     align-items: center;
     margin: 2rem auto;
     padding: 1rem;
@@ -133,7 +156,7 @@ body, label, button {
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.774),rgb(66, 7, 161),rgba(255, 255, 255, 0.774));
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
@@ -146,7 +169,7 @@ body, label, button {
 .search-form input[type="text"] {
     width: 50%;
     padding: 0.5rem;
-    border: 3px solid white;
+    border: 3px solid rgb(66, 7, 161);
     border-radius: 5px;
     margin-bottom: 1rem;
     background-color: rgb(31, 30, 30);
@@ -154,18 +177,38 @@ body, label, button {
 }
 
 .search-form button {
-    background-color: white;
-    color: black;
-    border: none;
+    color: white;
+    border: 1px solid white;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    background-color: transparent;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .search-form button:hover {
-    background-color: rgb(66, 7, 161);
-    color: white;
+    background-color: white;
+    color: black;
+}
+
+.slide-in{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0d0d1a;
+    transform-origin: bottom;
+}
+
+.slide-out{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0d0d1a;
+    transform-origin: top;
 }
 
 @media (max-width: 780px) {

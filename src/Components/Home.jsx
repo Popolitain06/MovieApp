@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from "react";
 import Movie from "./Movie";
+import transition from "../transition";
+import { motion, spring } from "framer-motion";
 
 
 function Home(){
@@ -22,12 +24,24 @@ function Home(){
     return(
 
         <>
-
+            <motion.div
+            
+            initial={{width : 0}}
+            animate={{width : "100%", transition: {duration: 0.5}}}
+            exit={{x : window.innerWidth ,transition: {duration: 0.5}}}
+            
+            >
             <h2>Les films tendances de la semaine</h2>
 
-                <div className="movie-container">
+                <motion.div className="movie-container"
+                initial={{x:"-100vw"}}
+                animate={{x: 0}}
+                transition={{type: "spring", duration: 1, bounce: 0.3}}
+                
+                >
                     <Movie data ={data}/>
-                </div>
+                </motion.div>
+            </motion.div>
 
 
         </>
@@ -35,4 +49,4 @@ function Home(){
 }
 
 
-export default Home
+export default transition(Home)

@@ -28,7 +28,6 @@ function Movie({data,dataItem}){
                     <p>Note moyenne : {e.vote_average}</p>
                     <p>Date de sortie : {new Date(e.release_date).toLocaleDateString()}</p>
                     <p>Résumé : {e.overview}</p>
-                    <p>ID : {e.id}</p>
                 </article>
             ))}
         </>
