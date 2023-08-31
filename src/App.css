@@ -95,8 +95,8 @@ h2{
     padding: 0.5rem 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
-
 }
+
 
 h2::after {
     content: ""; 

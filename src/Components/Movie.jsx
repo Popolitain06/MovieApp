@@ -4,7 +4,7 @@
 
 function Movie({data,dataItem}){
 
-    const BASE_IMG_URL = "https://image.tmdb.org/t/p/w500";
+    const BASE_IMG_URL = "https://image.tmdb.org/t/p/w400";
 
     return (
         <>
